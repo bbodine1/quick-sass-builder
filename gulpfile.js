@@ -30,12 +30,12 @@ gulp.task('default', ['serve']); // Options (serve, dev, prod)
 //// BUILDS - setup the sequence of tasks
 //////////////////////////////////////////////////////////
 
-// Build the project for development
+// DEV - Build the project for development
 gulp.task('dev', function(){
 	runSequence('clean',['html', 'sass']);
 });
 
-// Build the project for production
+// PROD - Build the project for production
 gulp.task('prod', function(){
 	runSequence('clean',['html', 'sass']);
 });
@@ -50,20 +50,20 @@ gulp.task('prod', function(){
 //// MAIN GULP TASKS - these tasks do something
 //////////////////////////////////////////////////////////
 
-// Remove the build folder and start clean
+// CLEAN - Remove the build folder and start clean
 gulp.task('clean', function(){
 	del([ paths.dist ]);
 });
 
 
-// Copy html files to the build directory
+// HTML - Copy html files to the build directory
 gulp.task('html', function() {
 	gulp.src( paths.src + '/**/*.html')
 	.pipe(gulp.dest( paths.dist ));
 });
 
 
-// Compile sass into CSS & auto-inject into browsers
+// SASS - Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
 	gulp.src( paths.src + '/assets/scss/*.scss')
 		.pipe(plumber())
@@ -76,7 +76,7 @@ gulp.task('sass', function() {
 });
 
 
-// Static Server + watching scss/html files
+// SERVE - Static Server + watching scss/html files
 gulp.task('serve', [servebuild], function() {
 
   browserSync.init({
