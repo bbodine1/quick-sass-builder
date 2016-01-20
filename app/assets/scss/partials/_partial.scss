@@ -28,7 +28,7 @@ section{
 
 // Main content box
 section div{
-	background: red;
+	background: $alizarin;
 	padding: rem-calc(20);
 	@media #{$large-up} {
 		background: $havelock;
