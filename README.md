@@ -21,6 +21,6 @@ From within the project folder
 * Rename the src directory (default is 'app')
 ```mv -f app yourDirName```
 
-* Open the gulfile and change the 'paths' 'src' to `yourDirName`
+* Open the gulpfile and change the 'paths' 'src' to `yourDirName`
 
 Now when you run the project it will use the new src folder name. Do not change the name of the folders inside of your src folder. It can be done but not without modifying the gulpfile extensively.
