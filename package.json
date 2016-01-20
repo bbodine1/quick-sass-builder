@@ -12,7 +12,8 @@
     "run-sequence": "^1.1.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
   },
   "author": "Brad Bodine <bbodine1@gmail.com>",
   "license": "GPL-3.0"
