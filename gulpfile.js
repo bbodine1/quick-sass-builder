@@ -2,6 +2,7 @@ var gulp        		= require('gulp');
 var browserSync 		= require('browser-sync').create();
 var sass        		= require('gulp-sass');
 var sourcemaps 			= require('gulp-sourcemaps');
+var autoprefixer 		= require('gulp-autoprefixer');
 var del         		= require('del');
 var runSequence 		= require('run-sequence');
 
@@ -66,6 +67,7 @@ gulp.task('sass', function() {
 	return gulp.src( paths.src + '/assets/scss/*.scss')
 		.pipe(sourcemaps.init())
   	.pipe(sass())
+		.pipe(autoprefixer())
   	.pipe(sourcemaps.write())
     .pipe(gulp.dest( paths.dist ))
     .pipe(browserSync.stream());
