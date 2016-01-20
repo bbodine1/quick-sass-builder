@@ -7,4 +7,6 @@ Clone this project.
 
 Run `npm install`
 
-run `npm start` or `gulp` . Either do the same thing.
+Run `npm start` or `gulp` . Either do the same thing.
+
+Edit app files as needed. The project source files are located in the `app` folder. This will be configurable in the future by editing the `gulpfile.js`
