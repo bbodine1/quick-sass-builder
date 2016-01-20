@@ -1,12 +1,10 @@
-// _partials - This is one partial file
+// partials/_partials - This is one partial file
 ////////////////////////////////////////////////
 
 // Global page styles
 body{
-	color: #fff;
-	background-color: #2980B9;
-	// background-image: url(./img/bgs/bg.jpg),
-	//                   linear-gradient(to right, rgba(#000, 1),  rgba(#000, 1));
+	color: $white;
+	background-color: $tufts;
 	background-size: cover;
   background-image   : linear-gradient(to right, rgba(30, 75, 115, 1),  rgba(#000, 0.5)),
                        url(./img/bgs/bg.jpg);
@@ -30,13 +28,13 @@ section{
 
 // Main content box
 section div{
-	background: #3498DB;
-	padding: 20px;
+	background: $havelock;
+	padding: rem-calc(20);
 	a{
 		text-decoration: none;
-		color: #F1C40F;
+		color: $corn;
 		&:hover{
-			color: #F39C12;
+			color: darken($corn, 5%);
 		}
 	}
 }

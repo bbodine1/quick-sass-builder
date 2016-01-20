@@ -1,9 +1,16 @@
 // styles - This is our base scss file
 ////////////////////////////////////////////////
 
+// Get Variables
+@import 'variables';
+
+
+// Get modules
+@import 'modules/all';
+
+
 // Get vendor files
 @import 'vendor/normalize';
-
 
 
 // Get our own partials in order
