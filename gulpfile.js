@@ -32,7 +32,7 @@ gulp.task('default', ['serve']); // Options (serve, dev, prod)
 
 // DEV - Build the project for development
 gulp.task('dev', function(){
-	runSequence('clean',['html', 'sass']);
+	runSequence('clean',['html', 'js', 'sass']);
 });
 
 // PROD - Build the project for production
@@ -73,6 +73,13 @@ gulp.task('sass', function() {
   	.pipe(sourcemaps.write())
     .pipe(gulp.dest( paths.dist ))
     .pipe(browserSync.stream());
+});
+
+
+// JS - Copy javascript custom file to the build directory
+gulp.task('js', function() {
+	gulp.src( paths.src + '/assets/js/custom.js')
+	.pipe(gulp.dest( paths.dist ));
 });
 
 
