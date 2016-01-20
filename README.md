@@ -4,7 +4,7 @@ This project will allow you to quickly create a html project and compile scss an
 
 ## Get Started
 Download the project from the command line
-`curl -L https://github.com/bbodine1/quick-sass-builder/archive/v1.0.tar.gz | tar zx`
+`curl -L https://github.com/bbodine1/quick-sass-builder/archive/v1.1.tar.gz | tar zx`
 
 Change directory into the folder `quick-sass-builder`
 
