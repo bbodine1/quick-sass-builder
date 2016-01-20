@@ -1,1 +1,10 @@
+// styles - This is our base scss file
+////////////////////////////////////////////////
+
+// Get vendor files
+@import 'vendor/normalize';
+
+
+
+// Get our own partials in order
 @import 'partials/partial';
