@@ -2,9 +2,20 @@
 ////////////////////////////////////////////////
 
 // Global page styles
-body, html{
-	background: #2980B9;
+body{
 	color: #fff;
+	background-color: #2980B9;
+	// background-image: url(./img/bgs/bg.jpg),
+	//                   linear-gradient(to right, rgba(#000, 1),  rgba(#000, 1));
+	background-size: cover;
+  background-image   : linear-gradient(to right, rgba(30, 75, 115, 1),  rgba(#000, 0.5)),
+                       url(./img/bgs/bg.jpg);
+
+  background-repeat  : no-repeat,
+                       no-repeat;
+
+  background-position: bottom right,
+                       center;
 }
 
 

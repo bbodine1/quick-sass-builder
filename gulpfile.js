@@ -3,11 +3,13 @@ var browserSync 		= require('browser-sync').create();
 var sass        		= require('gulp-sass');
 var sourcemaps 			= require('gulp-sourcemaps');
 var autoprefixer 		= require('gulp-autoprefixer');
+var imagemin		 		= require('gulp-imagemin');
 var plumber 				= require('gulp-plumber');
 var del         		= require('del');
 var runSequence 		= require('run-sequence');
 
 const reload = browserSync.reload;
+const stream = browserSync.stream;
 
 // Project Configurations
 var paths = {
@@ -32,7 +34,7 @@ gulp.task('default', ['serve']); // Options (serve, dev, prod)
 
 // DEV - Build the project for development
 gulp.task('dev', function(){
-	runSequence('clean',['html', 'js', 'sass']);
+	runSequence('clean',['html', 'img', 'js', 'sass']);
 });
 
 // PROD - Build the project for production
@@ -83,6 +85,14 @@ gulp.task('js', function() {
 });
 
 
+// IMG - Copy image file to the build directory
+gulp.task('img', function() {
+	gulp.src( paths.src + '/assets/img/**/*')
+	.pipe(imagemin())
+	.pipe(gulp.dest( paths.dist + '/img' ));
+});
+
+
 // SERVE - Static Server + watching scss/html files
 gulp.task('serve', [servebuild], function() {
 
@@ -92,6 +102,7 @@ gulp.task('serve', [servebuild], function() {
 
   gulp.watch([ paths.src + '/**/*.html'], ['html', reload]);
   gulp.watch([ paths.src + '/assets/scss/**/*.scss'], ['sass']);
+  gulp.watch([ paths.src + '/assets/img/**/*'], ['img', reload]);
 });
 
 //////////////////////////////////////////////////////////
