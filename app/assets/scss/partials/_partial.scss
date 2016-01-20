@@ -1,6 +1,32 @@
+// _partials - This is one partial file
+////////////////////////////////////////////////
+
+// Global page styles
 body, html{
-	background: blue;
+	background: #2980B9;
 	color: #fff;
 }
 
-h1{display: flex;}
+
+// Page wrapper settings
+section{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+
+// Main content box
+section div{
+	background: #3498DB;
+	padding: 20px;
+	a{
+		text-decoration: none;
+		color: #F1C40F;
+		&:hover{
+			color: #F39C12;
+		}
+	}
+}
+
