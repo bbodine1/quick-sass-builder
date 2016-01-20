@@ -28,8 +28,11 @@ section{
 
 // Main content box
 section div{
-	background: $havelock;
+	background: red;
 	padding: rem-calc(20);
+	@media #{$large-up} {
+		background: $havelock;
+	}
 	a{
 		text-decoration: none;
 		color: $corn;
