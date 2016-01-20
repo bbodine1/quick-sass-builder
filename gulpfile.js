@@ -3,6 +3,7 @@ var browserSync 		= require('browser-sync').create();
 var sass        		= require('gulp-sass');
 var sourcemaps 			= require('gulp-sourcemaps');
 var autoprefixer 		= require('gulp-autoprefixer');
+var plumber 				= require('gulp-plumber');
 var del         		= require('del');
 var runSequence 		= require('run-sequence');
 
@@ -64,7 +65,8 @@ gulp.task('html', function() {
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
-	return gulp.src( paths.src + '/assets/scss/*.scss')
+	gulp.src( paths.src + '/assets/scss/*.scss')
+		.pipe(plumber())
 		.pipe(sourcemaps.init())
   	.pipe(sass())
 		.pipe(autoprefixer())
