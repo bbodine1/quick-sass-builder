@@ -30,6 +30,11 @@ section{
 section div{
 	background: $alizarin;
 	padding: rem-calc(20);
+	height: rem-calc(100);
+	min-width: rem-calc(300);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	@media #{$large-up} {
 		background: $havelock;
 	}
@@ -42,3 +47,16 @@ section div{
 	}
 }
 
+.hide{
+	// display: none;
+}
+
+.go{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: red;
+	color: lightblue;
+	text-decoration: none;
+	padding: 10px;
+}

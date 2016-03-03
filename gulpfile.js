@@ -103,6 +103,7 @@ gulp.task('serve', [servebuild], function() {
   gulp.watch([ paths.src + '/**/*.html'], ['html', reload]);
   gulp.watch([ paths.src + '/assets/scss/**/*.scss'], ['sass']);
   gulp.watch([ paths.src + '/assets/img/**/*'], ['img', reload]);
+  gulp.watch([ paths.src + '/assets/js/**/*'], ['js', reload]);
 });
 
 //////////////////////////////////////////////////////////
